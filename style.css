@@ -5,7 +5,7 @@
 }
 
 @media screen and (min-width: 375px) {
-  nav {
+  header {
     position: fixed;
     min-height: 48px;
     height: 6.68%;
@@ -27,18 +27,20 @@
   }
 
   #logo {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 20px;
     text-align: center;
     color: #6070ff;
+    text-decoration: none;
   }
 
   #hamburger-button {
     display: flex;
     justify-content: center;
     margin: auto 0;
+    margin: 18px 0;
   }
 
   #hamburger-button img {
@@ -46,7 +48,7 @@
     margin: auto;
   }
 
-  header {
+  #headline {
     background-image: url("./visuals/header-background-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,7 +58,7 @@
     flex-direction: column;
   }
 
-  #header-container {
+  #headline-container {
     height: 150px;
     width: 100%;
     padding: 24px 24px;
@@ -70,7 +72,7 @@
   }
 
   .title {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -79,7 +81,7 @@
   }
 
   .paragraph {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -88,7 +90,7 @@
   }
 
   .supporting-text {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -102,6 +104,7 @@
     justify-content: space-between;
     width: 170px;
     margin-left: 0;
+    padding-left: 0;
   }
 
   .icon {
