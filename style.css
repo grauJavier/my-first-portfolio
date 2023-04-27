@@ -10,24 +10,24 @@
     min-height: 48px;
     height: 6.68%;
     width: 100%;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
-    padding: 0px 24px;
+    padding: 0 24px;
     box-sizing: border-box;
   }
 
   #logo-wraper {
-    margin: auto 0px;
+    margin: auto 0;
   }
 
   #logo {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 20px;
@@ -38,7 +38,7 @@
   #hamburger-button {
     display: flex;
     justify-content: center;
-    margin: auto 0px;
+    margin: auto 0;
   }
 
   #hamburger-button img {
@@ -47,7 +47,6 @@
   }
 
   header {
-    display: block;
     background-image: url("./visuals/header-background-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,7 +70,7 @@
   }
 
   .title {
-    font-family: "Poppins";
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -80,7 +79,7 @@
   }
 
   .paragraph {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -89,7 +88,7 @@
   }
 
   .supporting-text {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -102,7 +101,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 170px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .icon {
