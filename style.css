@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  background: #f7f7f9;
+}
+
 @media screen and (min-width: 375px) {
   header {
     position: fixed;
@@ -50,20 +54,23 @@
 
   #headline {
     background-image: url("./visuals/header-background-mobile.png");
+    background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 604px;
-    width: auto;
-    display: flex;
-    flex-direction: column;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 87.25% 1fr;
+    grid-template-rows: 114px 1fr 136px;
+    border-bottom-left-radius: 100px;
   }
 
   #headline-container {
-    height: 150px;
+    height: auto;
     width: 100%;
-    padding: 24px 24px;
-    margin-top: 114px;
     box-sizing: border-box;
+    grid-column-start: 2;
+    grid-row-start: 2;
   }
 
   .element {
@@ -110,5 +117,193 @@
   .icon {
     height: 20px;
     width: auto;
+  }
+
+  #works {
+    display: grid;
+    grid-template-columns: 1fr 87.25% 1fr;
+    padding: 114px 0;
+    row-gap: 88px;
+  }
+
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column-start: 2;
+    background-color: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 16px;
+  }
+
+  .work-snapshot {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .work-text-block {
+    margin: 6px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .client-role-year {
+    list-style-type: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 12px;
+    height: 32px;
+  }
+
+  .client-role-year li {
+    display: inline;
+  }
+
+  .work-client {
+    color: #344563;
+  }
+
+  .work-role,
+  .work-year {
+    color: #7a869a;
+  }
+
+  .bullet {
+    color: #c1c7d0;
+    font-size: 24px;
+  }
+
+  .tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6070ff;
+    gap: 8px;
+    margin: 6px 0;
+  }
+
+  .tag {
+    background: #ebebff;
+    border-radius: 8px;
+    padding: 4px 12px;
+  }
+
+  .button {
+    width: fit-content;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    text-decoration: none;
+    padding: 12px;
+    border: 2px solid #6070ff;
+    border-radius: 8px;
+    color: #396df2;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .button:hover {
+    background: #6070ff;
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+    color: #fff;
+  }
+
+  .button:active {
+    border: 2px solid #2230d2;
+    background: #2230d2;
+    color: #fff;
+  }
+
+  #about-myself {
+    background-color: #fff;
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 114px 6.4% 114px 6.4%;
+    border-top-right-radius: 100px;
+    gap: 12px;
+  }
+
+  #about-myself-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #boxes {
+    padding: 0;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .box {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #dfe1e6;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .chevron-icon {
+    height: 24px;
+  }
+
+  #box-languages {
+    border: 0;
+  }
+
+  .box-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    gap: 12px;
+  }
+
+  .box-element {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    background: #f7f7f9;
+    border-radius: 8px;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  .language-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
   }
 }
