@@ -60,8 +60,9 @@
 ### Key Features <a name="key-features"></a>
 
 - **Top Toolbar**
-- **Usage of flex display properties**
-- **Responsive size with proportions**
+- **Usage of flex and grid display properties**
+- **Implementation in design and code of sections: Headline, Works & About Myself**
+- **Responsive sizes with proportions**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
