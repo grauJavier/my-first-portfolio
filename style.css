@@ -214,7 +214,7 @@ body {
     line-height: 24px;
     text-decoration: none;
     padding: 12px;
-    border: 2px solid #6070ff;
+    border: 1px solid #6070ff;
     border-radius: 8px;
     color: #396df2;
     margin-top: 12px;
@@ -258,11 +258,13 @@ body {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+    margin-top: 48px;
   }
 
   .box {
     display: flex;
-    height: 70px;
+    flex-wrap: wrap;
+    min-height: 70px;
     width: 100%;
     border-bottom: 1px solid #dfe1e6;
     align-items: center;
@@ -285,6 +287,7 @@ body {
     padding: 0;
     list-style: none;
     gap: 12px;
+    margin-top: 36px;
   }
 
   .box-element {
@@ -299,6 +302,7 @@ body {
     border-radius: 8px;
     padding: 12px;
     box-sizing: border-box;
+    width: 303px;
   }
 
   .language-icon {
