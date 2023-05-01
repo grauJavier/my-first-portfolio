@@ -187,15 +187,16 @@ body {
   .tag-list {
     list-style: none;
     padding: 0;
-    width: 180vh;
+    display: inline;
+    width: 100%;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     color: #6070ff;
-    gap: 8px;
     margin: 6px 0;
+    overflow: hidden;
   }
 
   .tag {
@@ -203,6 +204,8 @@ body {
     background: #ebebff;
     border-radius: 8px;
     padding: 4px 12px;
+    float: left;
+    margin-right: max(8px, 2.13vw);
   }
 
   .button {
