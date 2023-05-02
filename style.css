@@ -20,7 +20,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/*Text properties*/
+/* Text properties */
 .title-text {
   font-weight: 700;
   font-size: max(10.66vw, 40px);
@@ -47,7 +47,7 @@ body {
   font-size: max(8.5vw, 32px);
   font-weight: 700;
   line-height: max(11.7vw, 44px);
-  letter-spacing: 0em;
+  letter-spacing: 0;
   color: #172b4d;
 }
 
