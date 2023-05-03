@@ -298,5 +298,50 @@ body {
     padding: 3.2vw;
     width: 100%;
   }
-}
+  
+  #contact-me {
+    background-color: #6070FF;
+    background-image: url("./visuals/contact-me-background-mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    border-top-left-radius: min(26.66vw, 100px);
+    box-shadow: 0 -40vw #fff;
+  }
 
+  #contact-me-container h2,
+  #contact-me-container p {
+    color: #fff;
+    text-align: center;
+  }
+
+  #contact-me-container {
+    padding-top: 24.46vw;
+    gap: max(3.2vw, 12px);
+    padding-bottom: max(8.8vw, 33px);
+  }
+  #contact-me-form ul {
+    gap: 5.3vw;
+  }
+
+  #contact-me-form {
+    padding-top: max(10.6vw, 40px);
+  }
+
+  .contact-me-input {
+    width: 100%;
+    height: auto;
+    padding: 4vw 10.13vw 4vw 4.26vw;
+    border: 1px solid #CFD8DC;
+    border-radius: max(2.13vw, 8px);
+  }
+
+  #message-box {
+    height: max(45.33vw, 170px);
+    font-family: inherit;
+  }
+
+  #submit-button {
+    padding: 3.2vw 4.26vw;
+  }
+}
