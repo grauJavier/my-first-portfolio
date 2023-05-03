@@ -306,7 +306,7 @@ body {
     background-size: contain;
     background-position: right;
     border-top-left-radius: min(26.66vw, 100px);
-    box-shadow: 0px -40vw #fff;
+    box-shadow: 0 -40vw #fff;
   }
 
   #contact-me-container h2,
