@@ -298,9 +298,9 @@ body {
     padding: 3.2vw;
     width: 100%;
   }
-  
+
   #contact-me {
-    background-color: #6070FF;
+    background-color: #6070ff;
     background-image: url("./visuals/contact-me-background-mobile.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -320,6 +320,7 @@ body {
     gap: max(3.2vw, 12px);
     padding-bottom: max(8.8vw, 33px);
   }
+
   #contact-me-form ul {
     gap: 5.3vw;
   }
@@ -332,7 +333,7 @@ body {
     width: 100%;
     height: auto;
     padding: 4vw 10.13vw 4vw 4.26vw;
-    border: 1px solid #CFD8DC;
+    border: 1px solid #cfd8dc;
     border-radius: max(2.13vw, 8px);
   }
 
