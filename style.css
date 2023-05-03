@@ -183,12 +183,13 @@ body {
 
   .icon {
     height: max(5.3vw, 20px);
+    margin-right: max(5.3vw, 20px);
   }
 
   .social-media-container {
     display: flex;
     justify-content: space-between;
-    width: max(45.37vw, 170.17px);
+    width: max(45.33vw, 170.17px);
   }
 
   #works-container {
