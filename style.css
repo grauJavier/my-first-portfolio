@@ -25,97 +25,97 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Text properties */
-.title-text {
-  font-weight: 700;
-  font-size: max(10.66vw, 40px);
-  line-height: max(13.86vw, 52px);
-  color: #172b4d;
-}
-
-.body-text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: max(4.26vw, 16px);
-  line-height: max(6.4vw, 24px);
-  color: #344563;
-}
-
-.supporting-text {
-  font-size: max(4.26vw, 16px);
-  font-weight: 500;
-  line-height: max(6.4vw, 24px);
-  color: #7f8cff;
-}
-
-.work-title-text {
-  font-size: max(8.5vw, 32px);
-  font-weight: 700;
-  line-height: max(11.7vw, 44px);
-  letter-spacing: 0;
-  color: #172b4d;
-}
-
-.tag {
-  display: inline;
-  background: #ebebff;
-  border-radius: 2.13vw;
-  padding: 1.06vw 3.2vw;
-  color: #6070ff;
-  font-weight: 500;
-  font-size: max(3.2vw, 12px);
-  line-height: max(2.39vh, 16px);
-  margin-right: max(2.13vw, 8px);
-}
-
-.client-role-year {
-  font-weight: 600;
-  font-size: max(3.46vw, 13px);
-  line-height: max(4.26vw, 16px);
-  gap: max(3.2vw, 12px);
-  display: flex;
-  align-items: center;
-}
-
-.client-role-year li {
-  display: inline;
-}
-
-.work-client {
-  color: #344563;
-}
-
-.work-role,
-.work-year {
-  color: #7a869a;
-}
-
-.bullet {
-  color: #c1c7d0;
-  font-size: max(6.4vw, 24px);
-}
-
-#boxes {
-  font-size: max(5.33vw, 20px);
-  font-weight: 500;
-  line-height: max(6.4vw, 24px);
-}
-
-.contact-me-input {
-  font-family: inherit;
-  font-size: max(4.53vw, 17px);
-  font-weight: 400;
-  line-height: max(5.33vw, 20px);
-  color: #172b4d;
-}
-
-#message-box {
-  font-size: max(4vw, 15px);
-  font-weight: 400;
-  line-height: max(6.4vw, 24px);
-}
-
 @media screen and (min-width: 375px) {
+  /* Text properties */
+  .title-text {
+    font-weight: 700;
+    font-size: max(10.66vw, 40px);
+    line-height: max(13.86vw, 52px);
+    color: #172b4d;
+  }
+
+  .body-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: max(4.26vw, 16px);
+    line-height: max(6.4vw, 24px);
+    color: #344563;
+  }
+
+  .supporting-text {
+    font-size: max(4.26vw, 16px);
+    font-weight: 500;
+    line-height: max(6.4vw, 24px);
+    color: #7f8cff;
+  }
+
+  .work-title-text {
+    font-size: max(8.5vw, 32px);
+    font-weight: 700;
+    line-height: max(11.7vw, 44px);
+    letter-spacing: 0;
+    color: #172b4d;
+  }
+
+  .tag {
+    display: inline;
+    background: #ebebff;
+    border-radius: 2.13vw;
+    padding: 1.06vw 3.2vw;
+    color: #6070ff;
+    font-weight: 500;
+    font-size: max(3.2vw, 12px);
+    line-height: max(2.39vh, 16px);
+    margin-right: max(2.13vw, 8px);
+  }
+
+  .client-role-year {
+    font-weight: 600;
+    font-size: max(3.46vw, 13px);
+    line-height: max(4.26vw, 16px);
+    gap: max(3.2vw, 12px);
+    display: flex;
+    align-items: center;
+  }
+
+  .client-role-year li {
+    display: inline;
+  }
+
+  .work-client {
+    color: #344563;
+  }
+
+  .work-role,
+  .work-year {
+    color: #7a869a;
+  }
+
+  .bullet {
+    color: #c1c7d0;
+    font-size: max(6.4vw, 24px);
+  }
+
+  #boxes {
+    font-size: max(5.33vw, 20px);
+    font-weight: 500;
+    line-height: max(6.4vw, 24px);
+  }
+
+  .contact-me-input {
+    font-family: inherit;
+    font-size: max(4.53vw, 17px);
+    font-weight: 400;
+    line-height: max(5.33vw, 20px);
+    color: #172b4d;
+  }
+
+  #message-box {
+    font-size: max(4vw, 15px);
+    font-weight: 400;
+    line-height: max(6.4vw, 24px);
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 1fr 87.25vw 1fr;
@@ -186,7 +186,7 @@ body {
     margin-right: max(5.3vw, 20px);
   }
 
-  .social-media-container {
+  #social-media-container {
     display: flex;
     justify-content: space-between;
     width: max(45.33vw, 170.17px);
