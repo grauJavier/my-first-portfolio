@@ -102,20 +102,6 @@ body {
     line-height: max(6.4vw, 24px);
   }
 
-  .contact-me-input {
-    font-family: inherit;
-    font-size: max(4.53vw, 17px);
-    font-weight: 400;
-    line-height: max(5.33vw, 20px);
-    color: #172b4d;
-  }
-
-  #message-box {
-    font-size: max(4vw, 15px);
-    font-weight: 400;
-    line-height: max(6.4vw, 24px);
-  }
-
   .grid {
     display: grid;
     grid-template-columns: 1fr 87.25vw 1fr;
@@ -331,6 +317,11 @@ body {
   }
 
   .contact-me-input {
+    font-family: inherit;
+    font-size: max(4.53vw, 17px);
+    font-weight: 400;
+    line-height: max(5.33vw, 20px);
+    color: #172b4d;
     width: 100%;
     height: auto;
     padding: 4vw 10.13vw 4vw 4.26vw;
@@ -341,6 +332,9 @@ body {
   #message-box {
     height: max(45.33vw, 170px);
     font-family: inherit;
+    font-size: max(4vw, 15px);
+    font-weight: 400;
+    line-height: max(6.4vw, 24px);
   }
 
   #submit-button {
