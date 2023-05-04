@@ -186,7 +186,7 @@ body {
     margin-right: max(5.3vw, 20px);
   }
 
-  #social-media-container {
+  .social-media-container {
     display: flex;
     justify-content: space-between;
     width: max(45.33vw, 170.17px);
