@@ -9,6 +9,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 li {
@@ -25,34 +26,35 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Mobile first approach */
 @media screen and (min-width: 375px) {
-  /* Text properties */
   .title-text {
     font-weight: 700;
-    font-size: max(10.66vw, 40px);
-    line-height: max(13.86vw, 52px);
+    font-size: 40px;
+    line-height: 52px;
     color: #172b4d;
   }
 
   .body-text {
     font-style: normal;
     font-weight: 400;
-    font-size: max(4.26vw, 16px);
-    line-height: max(6.4vw, 24px);
+    font-size: 16px;
+    line-height: 24px;
     color: #344563;
   }
 
   .supporting-text {
-    font-size: max(4.26vw, 16px);
+    font-size: 16px;
     font-weight: 500;
-    line-height: max(6.4vw, 24px);
+    line-height: 24px;
     color: #7f8cff;
+    margin-top: 12px;
   }
 
   .work-title-text {
-    font-size: max(8.5vw, 32px);
+    font-size: 32px;
     font-weight: 700;
-    line-height: max(11.7vw, 44px);
+    line-height: 44px;
     letter-spacing: 0;
     color: #172b4d;
   }
@@ -60,19 +62,19 @@ body {
   .tag {
     display: inline;
     background: #ebebff;
-    border-radius: 2.13vw;
-    padding: 1.06vw 3.2vw;
+    border-radius: 8px;
+    padding: 4px 12px;
     color: #6070ff;
     font-weight: 500;
-    font-size: max(3.2vw, 12px);
-    line-height: max(2.39vh, 16px);
-    margin-right: max(2.13vw, 8px);
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 8px;
   }
 
   .client-role-year {
     font-weight: 600;
-    font-size: max(3.46vw, 13px);
-    line-height: max(4.26vw, 16px);
+    font-size: 13px;
+    line-height: 6px;
     gap: max(3.2vw, 12px);
     display: flex;
     align-items: center;
@@ -93,13 +95,13 @@ body {
 
   .bullet {
     color: #c1c7d0;
-    font-size: max(6.4vw, 24px);
+    font-size: 24px;
   }
 
   #boxes {
-    font-size: max(5.33vw, 20px);
+    font-size: 20px;
     font-weight: 500;
-    line-height: max(6.4vw, 24px);
+    line-height: 24px;
   }
 
   .grid {
@@ -108,7 +110,7 @@ body {
   }
 
   .container {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
     grid-column: 2 / 3;
@@ -136,12 +138,20 @@ body {
   }
 
   #logo {
-    font-size: max(2.7vh, 18px);
+    font-size: 18px;
     font-weight: 700;
     line-height: 20px;
     text-align: center;
     color: #6070ff;
     text-decoration: none;
+  }
+
+  #mobile-menu {
+    display: inline;
+  }
+
+  #desktop-menu {
+    display: none;
   }
 
   #menu-icon {
@@ -157,7 +167,7 @@ body {
     background-position: top;
     height: 96.4%;
     width: 100%;
-    border-bottom-left-radius: min(26.66vw, 100px);
+    border-bottom-left-radius: max(10vw, 100px);
     margin-top: 7.188vh;
   }
 
@@ -168,14 +178,14 @@ body {
   }
 
   .icon {
-    height: max(5.3vw, 20px);
-    margin-right: max(5.3vw, 20px);
+    height: 20px;
+    margin-right: 20px;
   }
 
   .social-media-container {
     display: flex;
     justify-content: space-between;
-    width: max(45.33vw, 170.17px);
+    width: 170.17px;
   }
 
   #works-container {
@@ -184,13 +194,11 @@ body {
   }
 
   .work-card {
-    grid-column-start: 2;
-    background-color: #fff;
-    border: 1px solid #dfe1e6;
-    border-radius: max(2.39vh, 16px);
+    border-radius: 16px;
     width: 100%;
-    padding: 4.26vw 4.26vw;
+    padding: 1.66vw 1.66vw;
     gap: max(1.79vh, 12px);
+    background-color: #fff;
   }
 
   .work-text-container {
@@ -200,21 +208,22 @@ body {
   }
 
   .tag-list {
-    margin-top: max(3.2vw, 4px);
+    margin-top: 4px;
   }
 
   .button {
+    cursor: inherit;
     width: fit-content;
     font-family: inherit;
     font-weight: 500;
-    font-size: max(4.53vw, 17px);
-    line-height: max(6.4vw, 24px);
+    font-size: 17px;
+    line-height: 24px;
     text-decoration: none;
-    padding: max(3.2vw, 12px);
+    padding: 12px;
     border: 1px solid #6070ff;
-    border-radius: max(2.13vw, 8px);
+    border-radius: 8px;
     color: #396df2;
-    margin: max(3.2vw, 12px) 0;
+    margin: 12px 0;
   }
 
   .button:hover {
@@ -232,7 +241,7 @@ body {
   #about-myself {
     background-color: #fff;
     width: 100%;
-    border-top-right-radius: min(26.66vw, 100px);
+    border-top-right-radius: max(10vw, 100px);
     padding: 17.09vh 0 17.09vh 0;
   }
 
@@ -251,7 +260,7 @@ body {
     align-items: center;
     padding: 0 4.26vw;
     border-bottom: 1px solid #dfe1e6;
-    height: max(18.93vw, 71px);
+    height: 71px;
   }
 
   #box-languages {
@@ -259,29 +268,29 @@ body {
   }
 
   .chevron-icon {
-    height: 6.4vw;
-    width: 6.4vw;
-    margin-right: 7.46vw;
+    height: 24px;
+    width: 24px;
+    margin-right: 22px;
   }
 
   .language-icon {
-    width: 12.8vw;
+    width: 48px;
     height: auto;
     margin-right: 16px;
   }
 
   .box-list {
-    gap: max(1.79vh, 12px);
-    padding: max(1.79vh, 12px);
-    font-size: max(4vw, 15px);
-    line-height: max(5.33vw, 20px);
+    gap: 12px;
+    padding: 12px;
+    font-size: 15px;
+    line-height: 20px;
   }
 
   .box-element {
     display: flex;
     align-items: center;
     background: #f7f7f9;
-    border-radius: max(2.13vw, 8px);
+    border-radius: 8px;
     padding: 3.2vw;
     width: 100%;
   }
@@ -292,8 +301,8 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
-    border-top-left-radius: min(26.66vw, 100px);
-    box-shadow: 0 -40vw #fff;
+    border-top-left-radius: max(10vw, 100px);
+    box-shadow: 0 -160px #fff;
   }
 
   #contact-me-container h2,
@@ -318,26 +327,202 @@ body {
 
   .contact-me-input {
     font-family: inherit;
-    font-size: max(4.53vw, 17px);
+    font-size: 17px;
     font-weight: 400;
-    line-height: max(5.33vw, 20px);
+    line-height: 20px;
     color: #172b4d;
     width: 100%;
-    height: auto;
-    padding: 4vw 10.13vw 4vw 4.26vw;
+    height: 48px;
+    padding: 15px;
     border: 1px solid #cfd8dc;
-    border-radius: max(2.13vw, 8px);
+    border-radius: 8px;
   }
 
   #message-box {
-    height: max(45.33vw, 170px);
+    height: 170px;
     font-family: inherit;
-    font-size: max(4vw, 15px);
+    font-size: 15px;
     font-weight: 400;
-    line-height: max(6.4vw, 24px);
+    line-height: 24px;
   }
 
   #submit-button {
-    padding: 3.2vw 4.26vw;
+    padding: 12px 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 78.47vw 1fr;
+  }
+
+  header {
+    height: max(5vw, 72px);
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+
+  #desktop-menu {
+    display: flex;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  #desktop-menu ul {
+    flex-direction: row;
+    gap: 32px;
+    color: #344563;
+  }
+
+  #front-page {
+    background-image: url("./visuals/header-background-desktop.png");
+    background-size: 97.04vw 50.1vw;
+    background-position: center;
+    margin-top: max(5vw, 72px);
+  }
+
+  #front-page-container {
+    gap: max(0.83vw, 12px);
+    margin-top: max(20vw, 288px);
+    margin-bottom: max(17.7vw, 255px);
+    padding: 0 105px;
+  }
+
+  .title-text {
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0;
+  }
+
+  .body-text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  #works-container {
+    padding: max(9.86vw, 142px) 0;
+    gap: max(9.86vw, 142px);
+  }
+
+  .work-card {
+    border-radius: 24px;
+    width: 100%;
+    padding: 1.66vw;
+    gap: max(3.19vh, 24px);
+    flex-direction: row;
+    background-color: #fff;
+  }
+
+  .work-card:hover {
+    padding: calc(1.66vw - 1.6px);
+    cursor: url("./visuals/hand-cursor.png"), auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+    border: 2px solid #a7aeff;
+  }
+
+  #work-card-02,
+  #work-card-04 {
+    flex-direction: row-reverse;
+  }
+
+  .work-snapshot {
+    object-fit: contain;
+    width: 37.7vw;
+    border-radius: 8px;
+  }
+
+  .work-title-text {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .client-role-year {
+    font-size: 18px;
+    line-height: 24px;
+    gap: 12px;
+  }
+
+  .work-text-container p {
+    font-size: 16px;
+    line-height: 24px;
+    height: auto;
+  }
+
+  #about-myself-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #about-myself-text-container {
+    width: 100%;
+    gap: max(0.83vw, 12px);
+  }
+
+  #about-myself-text-container p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #about-myself-social {
+    margin-top: 0.97vw;
+    margin-left: 0.76vw;
+  }
+
+  .box {
+    width: min(47.5vw, 684px);
+    padding: 0 1.66vw;
+  }
+
+  .chevron-icon {
+    margin-right: 0.13vw;
+  }
+
+  .box-list {
+    flex-direction: row;
+    width: max(28.75vw, 414px);
+  }
+
+  .box-element {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  #contact-me {
+    background-image: url("./visuals/contact-me-background-desktop.png");
+    background-position: center;
+    background-size: 89.6vw;
+    justify-items: center;
+  }
+
+  #contact-me-container {
+    padding-top: 9.86vw;
+    padding-bottom: max(8.8vw, 33px);
+    gap: max(1.87vw, 27px);
+    max-width: 801px;
+    align-items: center;
+  }
+
+  #contact-me-container p {
+    max-width: 569px;
+  }
+
+  #contact-me-form {
+    padding: 0;
+  }
+
+  #contact-me-form ul {
+    align-items: center;
+    gap: 27px;
+  }
+
+  .contact-me-input {
+    width: 31.04vw;
+    height: 48px;
+    border-radius: 2px;
   }
 }
