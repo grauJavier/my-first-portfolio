@@ -126,6 +126,7 @@ body {
     right: 0;
     top: 0;
     background-color: #fff;
+    z-index: 1;
   }
 
   #header-container {
@@ -180,35 +181,22 @@ body {
   .icon {
     height: 20px;
     margin-right: 20px;
+    transition: height 0.21s;
+    position: absolute;
+  }
+
+  .icon:hover {
+    height: 25px;
+  }
+
+  .icon:hover #front-page-container {
+    margin-bottom: 250px;
   }
 
   .social-media-container {
     display: flex;
     justify-content: space-between;
     width: 170.17px;
-  }
-
-  #works-container {
-    padding: 17.09vh 0;
-    gap: 13.19vh;
-  }
-
-  .work-card {
-    border-radius: 16px;
-    width: 100%;
-    padding: 1.66vw 1.66vw;
-    gap: max(1.79vh, 12px);
-    background-color: #fff;
-  }
-
-  .work-text-container {
-    display: flex;
-    flex-direction: column;
-    gap: max(1.79vh, 12px);
-  }
-
-  .tag-list {
-    margin-top: 4px;
   }
 
   .button {
@@ -224,6 +212,7 @@ body {
     border-radius: 8px;
     color: #396df2;
     margin: 12px 0;
+    transition: background 0.1s, box-shadow 0.1s, color 0.1s, border 0.1s;
   }
 
   .button:hover {
@@ -236,6 +225,31 @@ body {
     border: 2px solid #2230d2;
     background: #2230d2;
     color: #fff;
+  }
+
+  #works-container {
+    padding: 17.09vh 0;
+    gap: 13.19vh;
+    align-items: center;
+  }
+
+  .work-card {
+    position: relative;
+    border-radius: 16px;
+    width: 100%;
+    padding: 1.66vw 1.66vw;
+    gap: max(1.79vh, 12px);
+    background-color: #fff;
+  }
+
+  .work-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: max(1.79vh, 12px);
+  }
+
+  .tag-list {
+    margin-top: 4px;
   }
 
   #about-myself {
@@ -292,7 +306,13 @@ body {
     background: #f7f7f9;
     border-radius: 8px;
     padding: 3.2vw;
-    width: 100%;
+    min-width: 35%;
+    transition: background 0.21s, padding-left 0.21s;
+  }
+
+  .box-element:hover {
+    background: #ececf0;
+    padding-left: 2vw;
   }
 
   #contact-me {
@@ -378,6 +398,11 @@ body {
     color: #344563;
   }
 
+  #desktop-menu li:hover {
+    position: relative;
+    color: #7f8cff;
+  }
+
   #front-page {
     background-image: url("./visuals/header-background-desktop.png");
     background-size: 97.04vw 50.1vw;
@@ -415,10 +440,13 @@ body {
     gap: max(3.19vh, 24px);
     flex-direction: row;
     background-color: #fff;
+    justify-content: space-between;
+    transition: margin-left 0.21s, box-shadow 0.21s, border 0.21s;
   }
 
-  .work-card:hover {
-    padding: calc(1.66vw - 1.6px);
+  #work-card-01:hover,
+  #work-card-03:hover {
+    margin-left: 1.38vw;
     cursor: url("./visuals/hand-cursor.png"), auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
     border: 2px solid #a7aeff;
@@ -427,12 +455,22 @@ body {
   #work-card-02,
   #work-card-04 {
     flex-direction: row-reverse;
+    transition: margin-right 0.21s, box-shadow 0.21s, border 0.21s;
+  }
+
+  #work-card-02:hover,
+  #work-card-04:hover {
+    margin-right: 1.38vw;
+    cursor: url("./visuals/hand-cursor.png"), auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+    border: 2px solid #a7aeff;
   }
 
   .work-snapshot {
     object-fit: contain;
     width: 37.7vw;
     border-radius: 8px;
+    transition: width 0.1s;
   }
 
   .work-title-text {
@@ -455,6 +493,10 @@ body {
   #about-myself-container {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  #about-myself-container .button {
+    margin-top: 38px;
   }
 
   #about-myself-text-container {
@@ -524,5 +566,10 @@ body {
     width: 31.04vw;
     height: 48px;
     border-radius: 2px;
+    transition: padding-left 0.21s;
+  }
+
+  .contact-me-input:hover {
+    padding-left: 21px;
   }
 }
