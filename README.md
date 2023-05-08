@@ -72,7 +72,7 @@
 
 <!-- Live Demo -->
 # 🚀 Live Demo <a name="live-demo"></a>
-To acces the Live Demo [Click here!](https://graujavier.github.io/my-first-portfolio/)
+To access the Live Demo [Click here!](https://graujavier.github.io/my-first-portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
