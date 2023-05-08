@@ -8,6 +8,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -49,9 +50,9 @@
 <details>
 <summary>Programing Languages</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">HTML</a></li>
-    <li><a href="https://www.postgresql.org/">CSS</a></li>
-    <li><a href="https://www.postgresql.org/">Git BASH</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Git">Git BASH</a></li>
   </ul>
 </details>
 
@@ -59,10 +60,19 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Top Toolbar**
-- **Usage of flex and grid display properties**
-- **Implementation in design and code of sections: Headline, Works & About Myself**
-- **Responsive sizes with proportions**
+- **Clean and Modern Design:** The page features a visually appealing and contemporary design, ensuring a pleasant user experience.
+
+- **Responsive Layout:** The website is responsive, meaning it adapts well to different screen sizes and devices, providing an optimal viewing experience for users on desktop, tablet, and mobile devices.
+
+- **Easy Navigation:** The site offers intuitive and easy-to-use navigation, making it effortless for users to explore different sections and find the desired information.
+
+- **Contact Form:** The page includes a contact form that enables visitors to get in touch with the owner easily, facilitating communication and potential collaboration opportunities.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Live Demo -->
+# 🚀 Live Demo <a name="live-demo"></a>
+To acces the Live Demo [Click here!](https://graujavier.github.io/my-first-portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +88,7 @@ To run this project you need:
 
 - Any Web Browser that supports HTML & CSS such as [Brave](https://brave.com/).
 - Any IDE and Code Editor such as [Visual Studio](https://visualstudio.microsoft.com/).
-- If you want to clone this project, please install [Git BASH](https://www.postgresql.org/).
+- If you want to clone this project, please install [Git BASH](https://git-scm.com/).
 
 ### Setup
 
@@ -100,7 +110,7 @@ No run test is available.
 
 ### Deployment
 
-No deployment is available.
+Deployment link: https://graujavier.github.io/my-first-portfolio/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,11 +118,14 @@ No deployment is available.
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author:** Javier Grau
-
+👤 **Javier Grau**
 - GitHub: [@grauJavier](https://github.com/grauJavier)
 - Twitter: [@jgrauchile](https://twitter.com/jgrauchile)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/javiergrau)
+
+👤 **Randall Bonilla**
+- GitHub: [@greetycr](https://github.com/GreetyCr)  
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/randall-bonilla-cordero-8653a6220/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
