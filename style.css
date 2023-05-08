@@ -243,6 +243,7 @@ body {
     border-radius: 8px;
     color: #396df2;
     margin: 12px 0;
+    margin-top: 38px;
     transition: background 0.1s, box-shadow 0.1s, color 0.1s, border 0.1s;
   }
 
