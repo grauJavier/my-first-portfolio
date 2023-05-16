@@ -304,6 +304,62 @@ body {
     color: #fff;
   }
 
+  #modal-popup-container {
+    display: grid;
+    grid-template-columns: 1fr 91.46vw 1fr;
+  }
+
+  #work-card-popup {
+    z-index: 3;
+    grid-column: 2 / 3;
+    border-radius: 16px;
+    width: 100%;
+    padding: 1.66vw 1.66vw;
+    gap: max(1.79vh, 12px);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+  }
+
+  #popup-container {
+    align-self: center;
+    justify-self: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.2;
+  }
+
+  .work-card-popup-line {
+    border: 0;
+    border-bottom: 1px solid #EBECF0;
+    
+  }
+
+  .work-buttons-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .button-see-live {
+    padding: 12px 27px;
+  }
+
+  .button-popup {
+    margin: 0;
+  }
+
   #works-container {
     padding: 17.09vh 0;
     gap: 13.19vh;
