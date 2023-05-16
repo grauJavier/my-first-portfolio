@@ -1,71 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./build/normalize.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="./build/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>My First Portfolio</title>
   </head>
-
   <body>
+    
     <header class="grid">
       <div id="header-container">
         <a href="#" id="logo" alt="A logo that says My Logo">My Logo</a>
-        <nav id="mobile-menu">
-          <img id="menu-icon" alt="Menu's icon" src="./visuals/menu-icon.png">
+        <nav id="mobile-menu-grid" class="grid">
+          <div id="hidden-menu-bg"></div>
+          <img id="menu-btn" alt="Menu's icon" src="./visuals/menu-icon.png" />
+          <div id="hidden-menu" class="grid">
+          <div class="container">
+            <i id="close-btn" class="bi bi-x"></i>
+            <ul class="container" id="hidden-menu-list">
+              <li><a href="#works">Portfolio</a></li>
+              <li><a href="#about-myself">About</a></li>
+              <li><a href="#contact-me">Contact</a></li>
+            </ul>
+          </div>
+          </div>
         </nav>
         <nav id="desktop-menu">
           <ul class="container">
-            <li><a href=#works>Portfolio</a></li>
-            <li><a href=#about-myself>About</a></li>
-            <li><a href=#contact-me>Contact</a></li>
+            <li><a href="#works">Portfolio</a></li>
+            <li><a href="#about-myself">About</a></li>
+            <li><a href="#contact-me">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <section class="grid" id="front-page">
       <div class="container" id="front-page-container">
-        <h1 class="title-text">
-          I’m Javier.<br>Glad to see you!</h1>
+        <h1 class="title-text">I’m Javier.<br />Glad to see you!</h1>
         <p class="body-text">
-          I’m a software developer! I can help you build a product,
-          feature or website Look through some of my work and experience!
-          If you like what you see and have a project you need coded, don’t
-          hesitate to contact me.
+          I’m a software developer! I can help you build a product, feature or
+          website Look through some of my work and experience! If you like what
+          you see and have a project you need coded, don’t hesitate to contact
+          me.
         </p>
         <h3 class="supporting-text">LET’S CONNECT</h3>
         <ul class="social-media-container">
           <li>
             <a href="#">
-              <img class="icon" alt="Twitter's icon"
-                src="./visuals/twitter-icon.png">
+              <img
+                class="icon"
+                alt="Twitter's icon"
+                src="./visuals/twitter-icon.png"
+              />
             </a>
           </li>
           <li>
             <a href="#">
-              <img class="icon" alt="LinkedIn's icon"
-                src="./visuals/linkedin-icon.png">
+              <img
+                class="icon"
+                alt="LinkedIn's icon"
+                src="./visuals/linkedin-icon.png"
+              />
             </a>
           </li>
           <li>
             <a href="#">
-              <img class="icon" alt="Medium's icon"
-                src="./visuals/medium-icon.png">
+              <img
+                class="icon"
+                alt="Medium's icon"
+                src="./visuals/medium-icon.png"
+              />
             </a>
           </li>
           <li>
             <a href="#">
-              <img class="icon" alt="GitHub's icon"
-                src="./visuals/github-icon.png">
+              <img
+                class="icon"
+                alt="GitHub's icon"
+                src="./visuals/github-icon.png"
+              />
             </a>
           </li>
           <li>
             <a href="#">
-              <img class="icon" alt="AngelList's icon"
-                src="./visuals/angellist-icon.png">
+              <img
+                class="icon"
+                alt="AngelList's icon"
+                src="./visuals/angellist-icon.png"
+              />
             </a>
           </li>
         </ul>
@@ -74,7 +99,7 @@
     <section class="grid" id="works">
       <div class="container" id="works-container">
         <div class="work-card container" id="work-card-01">
-          <img class="work-snapshot" src="./visuals/tonic-snapshot.png">
+          <img class="work-snapshot" src="./visuals/tonic-snapshot.png" />
           <div class="work-text-container">
             <h2 class="work-title-text">Tonic</h2>
             <ul class="client-role-year">
@@ -97,7 +122,10 @@
           </div>
         </div>
         <div class="work-card container" id="work-card-02">
-          <img class="work-snapshot" src="./visuals/multi-post-stories-snapshot.png">
+          <img
+            class="work-snapshot"
+            src="./visuals/multi-post-stories-snapshot.png"
+          />
           <div class="work-text-container">
             <h2 class="work-title-text">Multi-Post Stories</h2>
             <ul class="client-role-year">
@@ -120,8 +148,10 @@
           </div>
         </div>
         <div class="work-card container" id="work-card-03">
-          <img class="work-snapshot element"
-            src="./visuals/tonic-snapshot-02.png">
+          <img
+            class="work-snapshot element"
+            src="./visuals/tonic-snapshot-02.png"
+          />
           <div class="work-text-container">
             <h2 class="work-title-text">Tonic</h2>
             <ul class="client-role-year">
@@ -132,8 +162,8 @@
               <li class="work-year">2015</li>
             </ul>
             <p class="body-text">
-              A daily selection of privately personalized reads;
-              no accounts or sign-ups required.
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required.
             </p>
             <ul class="tag-list">
               <li class="tag">HTML</li>
@@ -144,7 +174,10 @@
           </div>
         </div>
         <div class="work-card container" id="work-card-04">
-          <img class="work-snapshot" src="./visuals/multi-post-stories-snapshot-02.png">
+          <img
+            class="work-snapshot"
+            src="./visuals/multi-post-stories-snapshot-02.png"
+          />
           <div class="work-text-container">
             <h2 class="work-title-text">Multi-Post Stories</h2>
             <ul class="client-role-year">
@@ -155,8 +188,8 @@
               <li class="work-year">2015</li>
             </ul>
             <p class="body-text">
-              A daily selection of privately personalized reads;
-              no accounts or sign-ups required.
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required.
             </p>
             <ul class="tag-list">
               <li class="tag">HTML</li>
@@ -171,65 +204,87 @@
     <section class="grid" id="about-myself">
       <div class="container" id="about-myself-container">
         <div class="container" id="about-myself-text-container">
-        <h2 class="title-text" id="about-myself-title">About Myself</h2>
-        <p class="body-text">
-          Hello I’m a software developer! I can help you build a product,
-          feature or website. Look through some of my work and experience! If
-          you like what you see and have a project you need coded, don’t
-          hesitate to contact me.
-        </p>
-        <h3 class="supporting-text">LET’S CONNECT</h3>
-        <ul class="social-media-container" id="about-myself-social">
-          <li>
-            <a href="#">
-              <img class="icon" alt="Twitter's icon"
-                src="./visuals/twitter-icon.png">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="icon" alt="LinkedIn's icon"
-                src="./visuals/linkedin-icon.png">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="icon" alt="Medium's icon"
-                src="./visuals/medium-icon.png">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="icon" alt="GitHub's icon"
-                src="./visuals/github-icon.png">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="icon" alt="AngelList's icon"
-                src="./visuals/angellist-icon.png">
-            </a>
-          </li>
-        </ul>
-        <a class="button" href="#">Get my resume</a>
-      </div>
+          <h2 class="title-text" id="about-myself-title">About Myself</h2>
+          <p class="body-text">
+            Hello I’m a software developer! I can help you build a product,
+            feature or website. Look through some of my work and experience! If
+            you like what you see and have a project you need coded, don’t
+            hesitate to contact me.
+          </p>
+          <h3 class="supporting-text">LET’S CONNECT</h3>
+          <ul class="social-media-container" id="about-myself-social">
+            <li>
+              <a href="#">
+                <img
+                  class="icon"
+                  alt="Twitter's icon"
+                  src="./visuals/twitter-icon.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="icon"
+                  alt="LinkedIn's icon"
+                  src="./visuals/linkedin-icon.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="icon"
+                  alt="Medium's icon"
+                  src="./visuals/medium-icon.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="icon"
+                  alt="GitHub's icon"
+                  src="./visuals/github-icon.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="icon"
+                  alt="AngelList's icon"
+                  src="./visuals/angellist-icon.png"
+                />
+              </a>
+            </li>
+          </ul>
+          <a class="button" href="#">Get my resume</a>
+        </div>
         <ul id="boxes">
           <li>
             <div class="container box" id="box-languages">
               Languages
-              <img class="chevron-icon" src="./visuals/chevron-down-icon.png">
+              <img
+                class="chevron-icon"
+                type="checkbox"
+                src="./visuals/chevron-right-icon.png"
+              />
             </div>
             <ul class="box-list container" id="languages">
               <li class="box-element">
-                <img class="language-icon" src="./visuals/javascript-icon.png">
+                <img
+                  class="language-icon"
+                  src="./visuals/javascript-icon.png"
+                />
                 JavaScript
               </li>
               <li class="box-element">
-                <img class="language-icon" src="./visuals/html-icon.png">
+                <img class="language-icon" src="./visuals/html-icon.png" />
                 HTML
               </li>
               <li class="box-element">
-                <img class="language-icon" src="./visuals/css-icon.png">
+                <img class="language-icon" src="./visuals/css-icon.png" />
                 CSS
               </li>
             </ul>
@@ -237,13 +292,19 @@
           <li>
             <div class="container box" id="box-frameworks">
               Frameworks
-              <img class="chevron-icon" src="./visuals/chevron-right-icon.png">
+              <img
+                class="chevron-icon"
+                src="./visuals/chevron-right-icon.png"
+              />
             </div>
           </li>
           <li>
             <div class="container box" id="box-skills">
               Skills
-              <img class="chevron-icon" src="./visuals/chevron-right-icon.png">
+              <img
+                class="chevron-icon"
+                src="./visuals/chevron-right-icon.png"
+              />
             </div>
           </li>
         </ul>
@@ -253,33 +314,55 @@
       <div class="container" id="contact-me-container">
         <h2 class="work-title-text">Contact me</h2>
         <p class="body-text">
-          If you have an application you are interested in developing,
-          a feature that you need built or a project that needs coding.
-          I’d love to help with it!</p>
-        <form class="container" id="contact-me-form"
-          action="https://formspree.io/f/mnqywvqy" method="POST">
+          If you have an application you are interested in developing, a feature
+          that you need built or a project that needs coding. I’d love to help
+          with it!
+        </p>
+        <form
+          class="container"
+          id="contact-me-form"
+          action="https://formspree.io/f/mnqywvqy"
+          method="POST"
+        >
           <ul class="container">
             <li>
-              <input class="contact-me-input" type="text" name="name"
-                placeholder="Lorem Ipsum" maxlength="30" required>
+              <input
+                class="contact-me-input"
+                type="text"
+                name="name"
+                placeholder="Lorem Ipsum"
+                maxlength="30"
+                required
+              />
             </li>
             <li>
-              <input class="contact-me-input" type="email" name="email"
-                placeholder="loremipsum@gmail.com" required>
+              <input
+                class="contact-me-input"
+                type="email"
+                name="email"
+                placeholder="loremipsum@gmail.com"
+                required
+              />
             </li>
             <li>
-              <textarea class="contact-me-input" id="message-box" name="message"
+              <textarea
+                class="contact-me-input"
+                id="message-box"
+                name="message"
                 placeholder="Write your message here..."
-                maxlength="500" required></textarea>
+                maxlength="500"
+                required
+              ></textarea>
             </li>
             <li>
-              <button class="button" id="submit-button" type="submit">Get in
-                touch</button>
+              <button class="button" id="submit-button" type="submit">
+                Get in touch
+              </button>
             </li>
           </ul>
         </form>
       </div>
     </section>
+    <script type="text/javascript" src="./script.js"></script>
   </body>
-
 </html>

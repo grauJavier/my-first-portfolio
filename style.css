@@ -15,6 +15,7 @@ a {
 li {
   list-style: none;
   display: inherit;
+  color:inherit;
 }
 
 textarea {
@@ -178,7 +179,7 @@ body {
     }
   }
 
-  #mobile-menu {
+  #mobile-menu-grid {
     display: inline;
   }
 
@@ -186,9 +187,50 @@ body {
     display: none;
   }
 
-  #menu-icon {
+  #menu-btn {
     height: max(3.59vh, 24px);
     width: auto;
+  }
+
+  #hidden-menu-bg,
+  #hidden-menu {
+    display: none;
+    align-self: center;
+    justify-self: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 3s;
+  }
+
+  #hidden-menu-bg {
+    background-color: #1c33ff;
+    opacity: 0.7;
+  }
+
+  #hidden-menu {
+    backdrop-filter: blur(6px);
+    padding-top: 10px;
+  }
+
+  #hidden-menu-list {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 44px;  
+    z-index: 3;
+    color: #fff;
+    gap: 4.9vh;
+  }
+
+  #close-btn {
+    align-self: end;
+    color: #fff;
+    font-size: 7.46vw;
   }
 
   #front-page {
@@ -416,6 +458,9 @@ body {
   #mobile-menu {
     display: none;
   }
+  #menu-btn {
+    display: none;
+  }
 
   #desktop-menu {
     display: flex;
@@ -439,14 +484,13 @@ body {
     background-image: url("./visuals/header-background-desktop.png");
     background-size: 97.04vw 50.1vw;
     background-position: center;
-    margin-top: max(5vw, 72px);
+    justify-content: center;
   }
 
   #front-page-container {
     gap: max(0.83vw, 12px);
-    margin-top: max(20vw, 288px);
-    margin-bottom: max(17.7vw, 255px);
     padding: 0 105px;
+    height: auto;
   }
 
   .title-text {
@@ -603,5 +647,9 @@ body {
 
   .contact-me-input:hover {
     padding-left: 21px;
+  }
+
+  .contact-me-input:focus {
+    outline: 5px solid #a7aeff;
   }
 }
