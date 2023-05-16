@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -15,7 +16,7 @@ a {
 li {
   list-style: none;
   display: inherit;
-  color:inherit;
+  color: inherit;
 }
 
 textarea {
@@ -28,7 +29,7 @@ body {
 }
 
 /* Mobile first approach */
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 0) {
   .title-text {
     font-weight: 700;
     font-size: 40px;
@@ -223,7 +224,7 @@ body {
   #hidden-menu-list {
     font-size: 32px;
     font-weight: 600;
-    line-height: 44px;  
+    line-height: 44px;
     z-index: 3;
     color: #fff;
     gap: 4.9vh;
@@ -460,6 +461,7 @@ body {
   #mobile-menu {
     display: none;
   }
+
   #menu-btn {
     display: none;
   }

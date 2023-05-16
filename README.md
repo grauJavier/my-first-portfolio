@@ -127,6 +127,11 @@ Deployment link: https://graujavier.github.io/my-first-portfolio/
 - GitHub: [@greetycr](https://github.com/GreetyCr)  
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/randall-bonilla-cordero-8653a6220/)
 
+👤 **Henok Mekonnen**
+- GitHub: [@henask12](https://github.com/henask12)
+- Twitter: [@henok_mekonnen3](https://twitter.com/henok_mekonnen3)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/henok-mekonnen-491685188)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
