@@ -7,18 +7,36 @@ let hiddenMenu = document.querySelector("#hidden-menu");
 hiddenMenuBg.style.display = "none";
 hiddenMenu.style.display = "none";
 
-function display() {
-  document.body.style.overflow = "hidden";
-  if (hiddenMenu.style.display == "none") {
+function openMenu() {
     hiddenMenuBg.style.display = "flex";
     hiddenMenu.style.display = "grid";
-  } else {
-    hiddenMenuBg.style.display = "none";
-    hiddenMenu.style.display = "none";
-  }
-  document.body.style.overflow = "visible";
+    setTimeout(function () {
+        hiddenMenuBg.style.opacity = 0.7;
+        hiddenMenu.style.opacity = 1;
+    }, 10);
+}
+
+function closeMenu() {
+    hiddenMenuBg.style.opacity = 0;
+    hiddenMenu.style.opacity = 0;
+    setTimeout(function () {
+        hiddenMenuBg.style.display = "none";
+        hiddenMenu.style.display = "none";
+    }, 500);
+}
+
+function display() {
+    if (hiddenMenu.style.display == "none") {
+        openMenu();
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    } else {
+        closeMenu();
+    }
 }
 
 menuBtn.addEventListener("click", display);
 closeBtn.addEventListener("click", display);
 sectionBtn.addEventListener("click", display);
+window.addEventListener("resize", display);

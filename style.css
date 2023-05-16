@@ -205,17 +205,19 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    transition: opacity 3s;
   }
 
   #hidden-menu-bg {
     background-color: #1c33ff;
-    opacity: 0.7;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
 
   #hidden-menu {
     backdrop-filter: blur(6px);
     padding-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
 
   #hidden-menu-list {
