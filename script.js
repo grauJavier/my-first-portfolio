@@ -86,9 +86,11 @@ function htmlBuilder() {
         modalPopupContainer.innerHTML = "";
     });
 }
+let buttons = document.querySelectorAll(".button");
 
-let buttonWork01 = document.querySelector("#work-1");
-buttonWork01.addEventListener("click", htmlBuilder);
+buttons.forEach((button) => {
+    button.addEventListener("click", htmlBuilder);
+});
 
 // // Modal pop-up section
 // let properties = {
