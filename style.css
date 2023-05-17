@@ -309,7 +309,7 @@ body {
     grid-template-columns: 1fr 91.46vw 1fr;
   }
 
-  #work-card-popup {
+  /* #work-card-popup {
     z-index: 3;
     grid-column: 2 / 3;
     border-radius: 16px;
@@ -358,7 +358,7 @@ body {
 
   .button-popup {
     margin: 0;
-  }
+  } */
 
   #works-container {
     padding: 17.09vh 0;
@@ -712,4 +712,140 @@ body {
   .contact-me-input:focus {
     outline: 5px solid #a7aeff;
   }
+}
+
+#modal-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#work-card-popup {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add your additional styles for the popup elements here */
+
+.show {
+  display: flex !important;
+}
+
+#work-card-popup {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 600px;
+  height: 80vh;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* Add this line to enable scrolling if content exceeds the card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#work-card-popup h2,
+#work-card-popup ul,
+#work-card-popup p,
+#work-card-popup .tag-list,
+#work-card-popup hr,
+#work-card-popup .work-buttons-container {
+  margin: 0;
+  padding: 0;
+}
+
+#work-card-popup h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#work-card-popup ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#work-card-popup li {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #888888;
+}
+
+#work-card-popup .work-snapshot {
+  width: 311px;
+  height: 220px;
+  background: url(blog_drbl_4x.png);
+  border-radius: 8px;
+  flex: none;
+  /* order: 1;
+  flex-grow: 0; */
+}
+
+#work-card-popup .body-text {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#work-card-popup .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+#work-card-popup .tag {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+  color: #333333;
+  border-radius: 3px;
+}
+
+#work-card-popup .work-card-popup-line {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 10px 0;
+}
+
+#work-card-popup .work-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#work-card-popup .button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#work-card-popup .button-popup {
+  margin-left: 10px;
+  background-color: #888888;
+}
+
+#work-card-popup .button-popup i {
+  margin-left: 5px;
+}
+
+#popup-container {
+  display: none;
 }

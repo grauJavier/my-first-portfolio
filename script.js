@@ -8,29 +8,29 @@ hiddenMenuBg.style.display = "none";
 hiddenMenu.style.display = "none";
 
 function openMenu() {
-  hiddenMenuBg.style.display = "flex";
-  hiddenMenu.style.display = "grid";
-  setTimeout(function () {
-    hiddenMenuBg.style.opacity = 0.7;
-    hiddenMenu.style.opacity = 1;
-  }, 10);
+    hiddenMenuBg.style.display = "flex";
+    hiddenMenu.style.display = "grid";
+    setTimeout(function () {
+        hiddenMenuBg.style.opacity = 0.7;
+        hiddenMenu.style.opacity = 1;
+    }, 10);
 }
 
 function closeMenu() {
-  hiddenMenuBg.style.opacity = 0;
-  hiddenMenu.style.opacity = 0;
-  setTimeout(function () {
-    hiddenMenuBg.style.display = "none";
-    hiddenMenu.style.display = "none";
-  }, 500);
+    hiddenMenuBg.style.opacity = 0;
+    hiddenMenu.style.opacity = 0;
+    setTimeout(function () {
+        hiddenMenuBg.style.display = "none";
+        hiddenMenu.style.display = "none";
+    }, 500);
 }
 
 function display() {
-  if (hiddenMenu.style.display == "none") {
-    openMenu();
-  } else {
-    closeMenu();
-  }
+    if (hiddenMenu.style.display == "none") {
+        openMenu();
+    } else {
+        closeMenu();
+    }
 }
 
 menuBtn.addEventListener("click", display);
@@ -40,11 +40,11 @@ window.addEventListener("resize", closeMenu);
 
 let modalPopupContainer = document.querySelector("#modal-popup-container");
 
-function htmlBuilder(tag, className, content) {
-  modalPopupContainer.insertAdjacentHTML(
-    "afterbegin",
-    `
-  <div id="work-card-popup">
+function htmlBuilder() {
+    modalPopupContainer.insertAdjacentHTML(
+        "afterbegin",
+        `
+    <div id="work-card-popup">
       <h2 class="work-title-text">Tonic</h2>
       <ul class="client-role-year">
         <li class="work-client">CANOPY</li>
@@ -73,9 +73,18 @@ function htmlBuilder(tag, className, content) {
           <i class="bi bi-arrow-up-right-circle" style="min-height: 18px"></i></a>
         <a class="button button-popup" id="see-source-1">See source <i class="bi bi-github" style="min-height: 18px"></i></a>
       </div>
+      <button class="close-button">Close</button>
     </div>
     <div id="popup-container"></div>`
-  );
+    );
+
+    modalPopupContainer.classList.add("show");
+
+    const closeButton = document.querySelector(".close-button");
+    closeButton.addEventListener("click", () => {
+        modalPopupContainer.classList.remove("show");
+        modalPopupContainer.innerHTML = "";
+    });
 }
 
 let buttonWork01 = document.querySelector("#work-1");
