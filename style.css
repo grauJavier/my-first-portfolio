@@ -304,6 +304,97 @@ body {
     color: #fff;
   }
 
+  #modal-popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    padding: 6.07vh 4.26vw;
+    backdrop-filter: blur(6px);
+  }
+
+  #work-card-popup {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  #work-card-popup #close-btn {
+    color: #67798e;
+    font-size: min(7.46vh, 7.46vw);
+  }
+
+  #work-card-popup .work-title-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #work-card-popup .work-snapshot {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .after-snapshot {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tags-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .work-card-popup-line {
+    border: 0;
+    border-bottom: 1px solid #ebecf0;
+  }
+
+  .work-buttons-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .button-see-live {
+    padding: 12px 27px;
+  }
+
+  .button-popup {
+    margin: 0;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .button-popup .bi {
+    font-size: larger;
+    position: relative;
+    top: 2.5px;
+  }
+
+  .show {
+    display: flex !important;
+  }
+
   #works-container {
     padding: 17.09vh 0;
     gap: 13.19vh;
@@ -655,5 +746,43 @@ body {
 
   .contact-me-input:focus {
     outline: 5px solid #a7aeff;
+  }
+
+  /* POP-UP STYLING */
+
+  #modal-popup-container {
+    padding: 77px 142px;
+    overflow: auto;
+  }
+
+  #work-card-popup {
+    gap: 0;
+  }
+
+  #work-card-popup #close-btn {
+    font-size: 30px;
+  }
+
+  #work-card-popup .work-snapshot {
+    margin-top: 36px;
+    margin-bottom: 59px;
+    max-height: 586px;
+    object-fit: cover;
+  }
+
+  .after-snapshot {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  #work-card-popup .body-text {
+    width: 66.66%;
+  }
+
+  .tags-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
