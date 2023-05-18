@@ -787,6 +787,22 @@ body {
   }
 }
 
+#contact-me-form ul li {
+  flex-direction: column;
+}
+
 #error-message {
-  display: none;
+  visibility: hidden;
+  box-shadow: 6px 6px #ffbebe;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  color: #f00;
+  font-weight: 500;
+  text-align: center;
+}
+
+#error-message,
+#submit-button {
+  align-self: center;
 }
