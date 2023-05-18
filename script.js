@@ -146,11 +146,29 @@ function htmlBuilder(index) {
 }
 
 let buttons = document.querySelectorAll(".work-card .button");
-let popupActive = false;
 
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
     document.querySelector("body").style.overflow = "hidden";
     htmlBuilder(index);
   });
+});
+
+// VALIDATION FORM
+
+let form = document.getElementById("contact-me-form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let errorMessage = document.getElementById("error-message");
+  let emailInput = document.getElementById("email-input");
+
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
+    errorMessage.textContent = "Email address must be written in lowercase";
+    errorMessage.style.visibility = "visible";
+  } else {
+    errorMessage.textContent = "";
+    errorMessage.style.visibility = "hidden";
+    event.target.submit();
+  }
 });
