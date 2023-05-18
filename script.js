@@ -8,6 +8,7 @@ hiddenMenuBg.style.display = "none";
 hiddenMenu.style.display = "none";
 
 function openMenu() {
+  document.querySelector("body").style.overflow = "hidden";
   hiddenMenuBg.style.display = "flex";
   hiddenMenu.style.display = "grid";
   setTimeout(function () {
@@ -17,6 +18,7 @@ function openMenu() {
 }
 
 function closeMenu() {
+  document.querySelector("body").style.overflow = "auto";
   hiddenMenuBg.style.opacity = 0;
   hiddenMenu.style.opacity = 0;
   setTimeout(function () {
@@ -101,8 +103,7 @@ objBuilder(
 function htmlBuilder(index) {
   modalPopupContainer.insertAdjacentHTML(
     "afterbegin",
-    `<div id="popup-background"></div>
-    <div id="work-card-popup">
+    `<div id="work-card-popup">
       <h2 class="work-title-text">${arrContent[index].title}<i id="close-btn" class="bi bi-x"></i></h2>
       <ul class="client-role-year">
         <li class="work-client">${arrContent[index].client}</li>
@@ -112,19 +113,23 @@ function htmlBuilder(index) {
         <li class="work-year">${arrContent[index].year}</li>
       </ul>
       <img class="work-snapshot" src="${arrContent[index].img_src}" />
-      <p class="body-text">
-      ${arrContent[index].body_text}
-      </p>
-      <ul class="tag-list">
-        <li class="tag">${arrContent[index].tags[0]}</li>
-        <li class="tag">${arrContent[index].tags[1]}</li>
-        <li class="tag">${arrContent[index].tags[2]}</li>
-      </ul>
-      <hr class="work-card-popup-line"></hr>
-      <div class="work-buttons-container">
-        <a class="button button-popup button-see-live" id="see-live-1">See live
-          <i class="bi bi-arrow-up-right-circle"></i></a>
-        <a class="button button-popup" id="see-source-1">See source <i class="bi bi-github" style="min-height: 18px"></i></a>
+      <div class="after-snapshot">
+        <p class="body-text">
+        ${arrContent[index].body_text}
+        </p>
+        <div class="tags-button-container">
+          <ul class="tag-list">
+            <li class="tag">${arrContent[index].tags[0]}</li>
+            <li class="tag">${arrContent[index].tags[1]}</li>
+            <li class="tag">${arrContent[index].tags[2]}</li>
+          </ul>
+          <hr class="work-card-popup-line"></hr>
+          <div class="work-buttons-container">
+            <a class="button button-popup button-see-live" id="see-live-1">See live
+              <i class="bi bi-arrow-up-right-circle"></i></a>
+            <a class="button button-popup" id="see-source-1">See source <i class="bi bi-github" style="min-height: 18px"></i></a>
+          </div>        
+        </div>
       </div>
     </div>`
   );
@@ -134,15 +139,18 @@ function htmlBuilder(index) {
 
   const closeButton = document.querySelector("#work-card-popup #close-btn");
   closeButton.addEventListener("click", () => {
+    document.querySelector("body").style.overflow = "auto";
     modalPopupContainer.classList.remove("show");
     modalPopupContainer.innerHTML = "";
   });
 }
 
 let buttons = document.querySelectorAll(".work-card .button");
+let popupActive = false;
 
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
+    document.querySelector("body").style.overflow = "hidden";
     htmlBuilder(index);
   });
 });
