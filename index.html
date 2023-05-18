@@ -263,15 +263,18 @@
       <form class="container" id="contact-me-form" action="https://formspree.io/f/mnqywvqy" method="POST">
         <ul class="container">
           <li>
-            <input class="contact-me-input" type="text" name="name" placeholder="Lorem Ipsum" maxlength="30" required />
+            <input class="contact-me-input" id="name-input" type="text" name="name" placeholder="Lorem Ipsum" maxlength="30" required />
+            <small></small>
           </li>
           <li>
             <input class="contact-me-input" type="email" name="email" placeholder="loremipsum@gmail.com" required />
+            <small></small>
           </li>
           <li>
             <textarea class="contact-me-input" id="message-box" name="message" placeholder="Write your message here..."
               maxlength="500" required></textarea>
-          </li>
+              <small></small>
+            </li>
           <li>
             <button class="button" id="submit-button" type="submit">
               Get in touch

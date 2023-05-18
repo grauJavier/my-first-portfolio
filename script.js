@@ -146,11 +146,34 @@ function htmlBuilder(index) {
 }
 
 let buttons = document.querySelectorAll(".work-card .button");
-let popupActive = false;
 
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
     document.querySelector("body").style.overflow = "hidden";
     htmlBuilder(index);
   });
+});
+
+// VALIDATION FORM
+
+//[object HTMLInputElement],[object HTMLInputElement],[object HTMLTextAreaElement],[object HTMLButtonElement]
+
+function validName(input, message) {
+  if (input.value.trim() === "") {
+    input.nextSibling.innerHTML = message;
+  }
+}
+
+let form = document.querySelector("#contact-me-form");
+let nameInput = document.querySelector("#name-input");
+let getInTouch = form[3];
+
+let NAME_REQUIRED = "Please enter your name";
+let EMAIL_REQUIRED = "Please enter your email";
+let EMAIL_INVALID = "Please enter a correct email address format";
+
+getInTouch.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  let nameValidator = validName(nameInput, NAME_REQUIRED);
 });
