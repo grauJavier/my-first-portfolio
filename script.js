@@ -154,6 +154,55 @@ buttons.forEach((button, index) => {
   });
 });
 
+// 1.0 LOCAL STORAGE
+//   1.1 Testing for availability
+function storageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (error) {
+    return (
+      error instanceof DOMException &&
+      // everything except Firefox
+      (error.code === 22 ||
+        // Firefox
+        error.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        error.name === "QuotaExceededError" ||
+        // Firefox
+        error.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
+}
+
+//   1.2 savingData
+function saveData() {
+  if (storageAvailable("localStorage")) {
+    let nameInput = document.getElementById("name-input");
+    let emailInput = document.getElementById("email-input");
+    let messageInput = document.getElementById("message-box");
+
+    localStorage.setItem(
+      "data",
+      JSON.stringify({
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value,
+      })
+    );
+  } else {
+    console.log("ERROR: Localstorage not aviable.");
+  }
+}
+
 // VALIDATION FORM
 
 let form = document.getElementById("contact-me-form");
@@ -170,5 +219,17 @@ form.addEventListener("submit", function (event) {
     errorMessage.textContent = "";
     errorMessage.style.visibility = "hidden";
     event.target.submit();
+    saveData();
   }
+});
+
+window.addEventListener("load", () => {
+  let nameInput = document.getElementById("name-input");
+  let emailInput = document.getElementById("email-input");
+  let messageInput = document.getElementById("message-box");
+
+  let formObj = JSON.parse(localStorage.getItem("data"));
+  nameInput.value = formObj.name;
+  emailInput.value = formObj.email;
+  messageInput.value = formObj.message;
 });
