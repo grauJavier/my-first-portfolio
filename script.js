@@ -154,6 +154,56 @@ buttons.forEach((button, index) => {
   });
 });
 
+// 1.0 LOCAL STORAGE
+//   1.1 Testing for availability
+function storageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (error) {
+    return (
+      error instanceof DOMException &&
+      // everything except Firefox
+      (error.code === 22 ||
+        // Firefox
+        error.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        error.name === "QuotaExceededError" ||
+        // Firefox
+        error.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
+}
+
+//   1.2 savingData
+function saveData() {
+  if (storageAvailable("localStorage")) {
+    let nameInput = document.getElementById("name-input");
+    let emailInput = document.getElementById("email-input");
+    let messageInput = document.getElementById("message-box");
+
+    let formObj = {
+      name: nameInput.value,
+      email: emailInput.value,
+      message: messageInput.value,
+    };
+
+    for (let i = 0; i < Object.keys(formObj).length; i++) {
+      localStorage.setItem(Object.keys(formObj)[i], Object.values(formObj)[i]);
+    }
+  } else {
+    console.log("ERROR: Localstorage not aviable.");
+  }
+}
+
 // VALIDATION FORM
 
 let form = document.getElementById("contact-me-form");
@@ -162,6 +212,7 @@ form.addEventListener("submit", function (event) {
 
   let errorMessage = document.getElementById("error-message");
   let emailInput = document.getElementById("email-input");
+  saveData();
 
   if (emailInput.value !== emailInput.value.toLowerCase()) {
     errorMessage.textContent = "Email address must be written in lowercase";
