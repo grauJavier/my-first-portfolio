@@ -189,15 +189,15 @@ function saveData() {
     let nameInput = document.getElementById("name-input");
     let emailInput = document.getElementById("email-input");
     let messageInput = document.getElementById("message-box");
-    let formObj = {
-      name: nameInput.value,
-      email: emailInput.value,
-      message: messageInput.value,
-    };
 
-    for (let i = 0; i < Object.keys(formObj).length; i++) {
-      localStorage.setItem(Object.keys(formObj)[i], Object.values(formObj)[i]);
-    }
+    localStorage.setItem(
+      "data",
+      JSON.stringify({
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value,
+      })
+    );
   } else {
     console.log("ERROR: Localstorage not aviable.");
   }
@@ -211,7 +211,6 @@ form.addEventListener("submit", function (event) {
 
   let errorMessage = document.getElementById("error-message");
   let emailInput = document.getElementById("email-input");
-  saveData();
 
   if (emailInput.value !== emailInput.value.toLowerCase()) {
     errorMessage.textContent = "Email address must be written in lowercase";
@@ -220,6 +219,7 @@ form.addEventListener("submit", function (event) {
     errorMessage.textContent = "";
     errorMessage.style.visibility = "hidden";
     event.target.submit();
+    saveData();
   }
 });
 
@@ -228,7 +228,8 @@ window.addEventListener("load", () => {
   let emailInput = document.getElementById("email-input");
   let messageInput = document.getElementById("message-box");
 
-  nameInput.value = localStorage.getItem("name");
-  emailInput.value = localStorage.getItem("email");
-  messageInput.value = localStorage.getItem("message");
+  let formObj = JSON.parse(localStorage.getItem("data"));
+  nameInput.value = formObj.name;
+  emailInput.value = formObj.email;
+  messageInput.value = formObj.message;
 });
