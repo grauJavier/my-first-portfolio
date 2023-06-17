@@ -343,7 +343,9 @@ body {
   }
 
   #work-card-popup .work-snapshot {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     border-radius: 8px;
   }
 
@@ -351,6 +353,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
   }
 
   .tags-button-container {
@@ -383,6 +386,7 @@ body {
     line-height: 20px;
     font-weight: 500;
     margin-bottom: 0;
+    cursor: pointer;
   }
 
   .button-popup .bi {
@@ -612,12 +616,11 @@ body {
     flex-direction: row;
     background-color: #fff;
     justify-content: space-between;
-    transition: margin-left 0.21s, box-shadow 0.21s, border 0.21s;
+    transition: all 0.21s;
   }
 
   #work-card-01:hover,
   #work-card-03:hover {
-    margin-left: 1.38vw;
     cursor: url("./visuals/hand-cursor.png"), auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
     border: 2px solid #a7aeff;
@@ -631,7 +634,6 @@ body {
 
   #work-card-02:hover,
   #work-card-04:hover {
-    margin-right: 1.38vw;
     cursor: url("./visuals/hand-cursor.png"), auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
     border: 2px solid #a7aeff;

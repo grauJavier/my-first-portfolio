@@ -1,16 +1,16 @@
-let menuBtn = document.querySelector("#menu-btn");
-let closeBtn = document.querySelector("#close-btn");
-let sectionBtn = document.querySelector("#hidden-menu-list");
-let hiddenMenuBg = document.querySelector("#hidden-menu-bg");
-let hiddenMenu = document.querySelector("#hidden-menu");
+let menuBtn = document.querySelector('#menu-btn');
+let closeBtn = document.querySelector('#close-btn');
+let sectionBtn = document.querySelector('#hidden-menu-list');
+let hiddenMenuBg = document.querySelector('#hidden-menu-bg');
+let hiddenMenu = document.querySelector('#hidden-menu');
 
-hiddenMenuBg.style.display = "none";
-hiddenMenu.style.display = "none";
+hiddenMenuBg.style.display = 'none';
+hiddenMenu.style.display = 'none';
 
 function openMenu() {
-  document.querySelector("body").style.overflow = "hidden";
-  hiddenMenuBg.style.display = "flex";
-  hiddenMenu.style.display = "grid";
+  document.querySelector('body').style.overflow = 'hidden';
+  hiddenMenuBg.style.display = 'flex';
+  hiddenMenu.style.display = 'grid';
   setTimeout(function () {
     hiddenMenuBg.style.opacity = 0.7;
     hiddenMenu.style.opacity = 1;
@@ -18,34 +18,44 @@ function openMenu() {
 }
 
 function closeMenu() {
-  document.querySelector("body").style.overflow = "auto";
+  document.querySelector('body').style.overflow = 'auto';
   hiddenMenuBg.style.opacity = 0;
   hiddenMenu.style.opacity = 0;
   setTimeout(function () {
-    hiddenMenuBg.style.display = "none";
-    hiddenMenu.style.display = "none";
+    hiddenMenuBg.style.display = 'none';
+    hiddenMenu.style.display = 'none';
   }, 500);
 }
 
 function display() {
-  if (hiddenMenu.style.display == "none") {
+  if (hiddenMenu.style.display == 'none') {
     openMenu();
   } else {
     closeMenu();
   }
 }
 
-menuBtn.addEventListener("click", display);
-closeBtn.addEventListener("click", display);
-sectionBtn.addEventListener("click", display);
-window.addEventListener("resize", closeMenu);
+menuBtn.addEventListener('click', display);
+closeBtn.addEventListener('click', display);
+sectionBtn.addEventListener('click', display);
+window.addEventListener('resize', closeMenu);
 
 // MODAL POPUP ANIMATION
 
-let modalPopupContainer = document.querySelector("#modal-popup-container");
+let modalPopupContainer = document.querySelector('#modal-popup-container');
 let arrContent = [];
 
-function objBuilder(title, client, role, year, img_src, body_text, tags) {
+function objBuilder(
+  title,
+  client,
+  role,
+  year,
+  img_src,
+  body_text,
+  tags,
+  liveHref = '#',
+  sourceHref = '#'
+) {
   let newObj = new Object();
   arrContent.push(newObj);
 
@@ -58,51 +68,56 @@ function objBuilder(title, client, role, year, img_src, body_text, tags) {
   arrContent[i].img_src = img_src;
   arrContent[i].body_text = body_text;
   arrContent[i].tags = tags;
+  arrContent[i].liveHref = liveHref;
+  arrContent[i].sourceHref = sourceHref;
+
 }
 
 objBuilder(
-  "Tonic",
-  "CANOPY",
-  "Back End Dev",
-  "2015",
-  "./visuals/tonic-snapshot.png",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-  ["HTML", "CSS", "JavaScript"]
+  'Joshua Redman World Tour 2023',
+  'JRWT Team',
+  'Full-Stack Dev',
+  '2023',
+  './visuals/jrwt-snapshot.png',
+  'The Joshua Redman World Tour 2023 project provides information about the tour of the renowned jazz saxophonist Joshua Redman, including tour dates, venues, and ticket information.',
+  ['HTML', 'CSS', 'JavaScript'],
+  'https://graujavier.github.io/capstone-project/index.html',
+  'https://github.com/grauJavier/capstone-project'
 );
 
 objBuilder(
-  "Multi-Post Stories",
-  "CANOPY",
-  "Back End Dev",
-  "2015",
-  "./visuals/multi-post-stories-snapshot.png",
+  'Multi-Post Stories',
+  'CANOPY',
+  'Back End Dev',
+  '2015',
+  './visuals/multi-post-stories-snapshot.png',
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-  ["HTML", "CSS", "JavaScript"]
+  ['HTML', 'CSS', 'JavaScript']
 );
 
 objBuilder(
-  "Tonic",
-  "CANOPY",
-  "Back End Dev",
-  "2015",
-  "./visuals/tonic-snapshot-02.png",
+  'Tonic',
+  'CANOPY',
+  'Back End Dev',
+  '2015',
+  './visuals/tonic-snapshot-02.png',
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-  ["HTML", "CSS", "JavaScript"]
+  ['HTML', 'CSS', 'JavaScript']
 );
 
 objBuilder(
-  "Multi-Post Stories",
-  "CANOPY",
-  "Back End Dev",
-  "2015",
-  "./visuals/multi-post-stories-snapshot-02.png",
+  'Multi-Post Stories',
+  'CANOPY',
+  'Back End Dev',
+  '2015',
+  './visuals/multi-post-stories-snapshot-02.png',
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-  ["HTML", "CSS", "JavaScript"]
+  ['HTML', 'CSS', 'JavaScript']
 );
 
 function htmlBuilder(index) {
   modalPopupContainer.insertAdjacentHTML(
-    "afterbegin",
+    'afterbegin',
     `<div id="work-card-popup">
       <h2 class="work-title-text">${arrContent[index].title}<i id="close-btn" class="bi bi-x"></i></h2>
       <ul class="client-role-year">
@@ -125,9 +140,9 @@ function htmlBuilder(index) {
           </ul>
           <hr class="work-card-popup-line"></hr>
           <div class="work-buttons-container">
-            <a class="button button-popup button-see-live" id="see-live-1">See live
+            <a class="button button-popup button-see-live" id="see-live-1" href="${arrContent[index].liveHref}">See live
               <i class="bi bi-arrow-up-right-circle"></i></a>
-            <a class="button button-popup" id="see-source-1">See source <i class="bi bi-github" style="min-height: 18px"></i></a>
+            <a class="button button-popup" id="see-source-1" href="${arrContent[index].sourceHref}">See source <i class="bi bi-github" style="min-height: 18px"></i></a>
           </div>        
         </div>
       </div>
@@ -135,21 +150,21 @@ function htmlBuilder(index) {
   );
 
   // BUTTON INTERACTION IN WORK CARD
-  modalPopupContainer.classList.add("show");
+  modalPopupContainer.classList.add('show');
 
-  const closeButton = document.querySelector("#work-card-popup #close-btn");
-  closeButton.addEventListener("click", () => {
-    document.querySelector("body").style.overflow = "auto";
-    modalPopupContainer.classList.remove("show");
-    modalPopupContainer.innerHTML = "";
+  const closeButton = document.querySelector('#work-card-popup #close-btn');
+  closeButton.addEventListener('click', () => {
+    document.querySelector('body').style.overflow = 'auto';
+    modalPopupContainer.classList.remove('show');
+    modalPopupContainer.innerHTML = '';
   });
 }
 
-let buttons = document.querySelectorAll(".work-card .button");
+let buttons = document.querySelectorAll('.work-card .button');
 
 buttons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    document.querySelector("body").style.overflow = "hidden";
+  button.addEventListener('click', () => {
+    document.querySelector('body').style.overflow = 'hidden';
     htmlBuilder(index);
   });
 });
@@ -160,7 +175,7 @@ function storageAvailable(type) {
   let storage;
   try {
     storage = window[type];
-    const x = "__storage_test__";
+    const x = '__storage_test__';
     storage.setItem(x, x);
     storage.removeItem(x);
     return true;
@@ -173,9 +188,9 @@ function storageAvailable(type) {
         error.code === 1014 ||
         // test name field too, because code might not be present
         // everything except Firefox
-        error.name === "QuotaExceededError" ||
+        error.name === 'QuotaExceededError' ||
         // Firefox
-        error.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+        error.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
       // acknowledge QuotaExceededError only if there's something already stored
       storage &&
       storage.length !== 0
@@ -185,13 +200,13 @@ function storageAvailable(type) {
 
 //   1.2 savingData
 function saveData() {
-  if (storageAvailable("localStorage")) {
-    let nameInput = document.getElementById("name-input");
-    let emailInput = document.getElementById("email-input");
-    let messageInput = document.getElementById("message-box");
+  if (storageAvailable('localStorage')) {
+    let nameInput = document.getElementById('name-input');
+    let emailInput = document.getElementById('email-input');
+    let messageInput = document.getElementById('message-box');
 
     localStorage.setItem(
-      "data",
+      'data',
       JSON.stringify({
         name: nameInput.value,
         email: emailInput.value,
@@ -199,36 +214,36 @@ function saveData() {
       })
     );
   } else {
-    console.log("ERROR: Localstorage not aviable.");
+    console.log('ERROR: Localstorage not aviable.');
   }
 }
 
 // VALIDATION FORM
 
-let form = document.getElementById("contact-me-form");
-form.addEventListener("submit", function (event) {
+let form = document.getElementById('contact-me-form');
+form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  let errorMessage = document.getElementById("error-message");
-  let emailInput = document.getElementById("email-input");
+  let errorMessage = document.getElementById('error-message');
+  let emailInput = document.getElementById('email-input');
 
   if (emailInput.value !== emailInput.value.toLowerCase()) {
-    errorMessage.textContent = "Email address must be written in lowercase";
-    errorMessage.style.visibility = "visible";
+    errorMessage.textContent = 'Email address must be written in lowercase';
+    errorMessage.style.visibility = 'visible';
   } else {
-    errorMessage.textContent = "";
-    errorMessage.style.visibility = "hidden";
+    errorMessage.textContent = '';
+    errorMessage.style.visibility = 'hidden';
     event.target.submit();
     saveData();
   }
 });
 
-window.addEventListener("load", () => {
-  let nameInput = document.getElementById("name-input");
-  let emailInput = document.getElementById("email-input");
-  let messageInput = document.getElementById("message-box");
+window.addEventListener('load', () => {
+  let nameInput = document.getElementById('name-input');
+  let emailInput = document.getElementById('email-input');
+  let messageInput = document.getElementById('message-box');
 
-  let formObj = JSON.parse(localStorage.getItem("data"));
+  let formObj = JSON.parse(localStorage.getItem('data'));
   nameInput.value = formObj.name;
   emailInput.value = formObj.email;
   messageInput.value = formObj.message;
